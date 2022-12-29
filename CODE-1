@@ -1,0 +1,24 @@
+#include <LiquidCrystal.h> // Include the LiquidCrystal library
+
+// Define the pins used to connect the LCD to the Arduino
+#define LCD_RS 7
+#define LCD_ENABLE 8
+#define LCD_D4 9
+#define LCD_D5 10
+#define LCD_D6 11
+#define LCD_D7 12
+
+// Create a LiquidCrystal object with the specified pins
+LiquidCrystal lcd(LCD_RS, LCD_ENABLE, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
+
+void setup() {
+  // Initialize the LCD
+  lcd.begin(16, 2); // Set the dimensions of the LCD
+  lcd.clear(); // Clear the display
+  lcd.setCursor(0, 0); // Set the cursor to the top-left corner of the LCD
+  lcd.print("HAPPY NEW YEAR!"); // Print the message to the LCD
+}
+
+void loop() {
+  // The message will stay on the LCD until it is cleared or the program is restarted
+}
